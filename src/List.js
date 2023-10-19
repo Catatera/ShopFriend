@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function List() {
+export default function List(props) {
   return (
     <div>
-      <p style={{ color: "red" }}>Linha 1</p>
-      <p style={{ color: "green" }}>Linha 2</p>
+      <p style={{ color: "red" }}></p>
+      <p style={{ color: "green" }}></p>
     </div>
   );
 }

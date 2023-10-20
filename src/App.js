@@ -10,8 +10,9 @@ export default function App() {
   function handleSubmit(event) {
     event.preventDefault();
     setProductList(
-      ...products
+      [...products]
     );
+    console.log(products)
   }
 
   return (

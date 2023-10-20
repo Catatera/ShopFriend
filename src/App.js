@@ -3,16 +3,13 @@ import List from "./List";
 
 export default function App() {
   const [products, setProducts] = useState("");
-  let [productList,setProductList] = useState(products);
+  const [productList, setProductList] = useState([products]);
   function handleChange(event) {
     setProducts(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    setProductList(
-      [...products]
-    );
-    console.log(products)
+    setProductList([...products]);
   }
 
   return (
@@ -22,8 +19,7 @@ export default function App() {
         <button>Adicionar</button>
       </form>
       <br />
-      <p>{productList}</p>
-      <List />
+      <List product={products} productList={productList} />
     </>
   );
 }

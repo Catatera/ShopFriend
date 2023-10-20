@@ -3,8 +3,32 @@ import React from "react";
 export default function List(props) {
   return (
     <div>
-      <p style={{ color: "red" }}></p>
-      <p style={{ color: "green" }}></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{props.productList}</td>
+            <td>{Math.floor(10 * Math.random())}</td>
+          </tr>
+          <tr>
+            <td>{props.productList}</td>
+            <td>{Math.floor(10 * Math.random())}</td>
+          </tr>
+          <tr>
+            <td>{props.productList}</td>
+            <td>{Math.floor(10 * Math.random())}</td>
+          </tr>
+          <tr>
+            <td>{props.productList}</td>
+            <td>{Math.floor(10 * Math.random())}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

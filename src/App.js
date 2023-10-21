@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 
 export default function App() {
-  
+  const [typeProduct, setTypeProduct] = useState("");
   const [products, setProducts] = useState([]);
+
+  const handleChange = (e) => {
+    setTypeProduct(e.target.value);
+    console.log(typeProduct);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -10,7 +15,7 @@ export default function App() {
       ...products,
       {
         id: products.length,
-        value: `Produto ${products.length}`,
+        value: typeProduct,
       },
     ]);
   }
@@ -18,7 +23,7 @@ export default function App() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text"></input>
+        <input type="text" onChange={handleChange}></input>
         <button>Adicionar</button>
       </form>
       <br />

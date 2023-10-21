@@ -11,24 +11,23 @@ export default function List(props) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{props.productList}</td>
-            <td>{Math.floor(10 * Math.random())}</td>
-          </tr>
-          <tr>
-            <td>{props.productList}</td>
-            <td>{Math.floor(10 * Math.random())}</td>
-          </tr>
-          <tr>
-            <td>{props.productList}</td>
-            <td>{Math.floor(10 * Math.random())}</td>
-          </tr>
-          <tr>
-            <td>{props.productList}</td>
-            <td>{Math.floor(10 * Math.random())}</td>
-          </tr>
+          {props.products.map((product) => (
+            <tr key={product.id}>
+              <td>{product.value}</td>
+              <td>{product.quantity}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
+      {/* <ul>
+        {props.products.map((product) => (
+          <>
+            <td id={product.id} quantity={product.quantity}>
+              {product.value} {props.quantity}
+            </td>
+          </>
+        ))}
+      </ul> */}
     </div>
   );
 }

@@ -1,25 +1,37 @@
 import React, { useState } from "react";
 import List from "./List";
+import Form from "./Form";
 
 export default function App() {
-  const [products, setProducts] = useState("");
-  const [productList, setProductList] = useState([products]);
-  function handleChange(event) {
-    setProducts(event.target.value);
+  const [typeProduct, setTypeProduct] = useState("");
+  const [products, setProducts] = useState([]);
+  const [quantity, setQuantity] = useState("");
+
+  const handlechangeProduct = (e) => {
+    setTypeProduct(e.target.value);
+  };
+
+  const handleQuantity = (e) => { 
+    setQuantity(e.target.value)
   }
-  function handleSubmit(event) {
-    event.preventDefault();
-    setProductList([...products]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const addProduct = setProducts([
+      ...products,
+      {
+        id: products.length+1,
+        value: typeProduct,
+        quantity: quantity,
+      },
+    ]);
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange}></input>
-        <button>Adicionar</button>
-      </form>
-      <br />
-      <List product={products} productList={productList} />
+      <Form onChangeProduct={handlechangeProduct} onSetQuantity={handleQuantity} onSubmit={handleSubmit} />
+
+      <List products={products} quantity = {quantity} />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import List from "./List";
 import Form from "./Form";
-
 export default function App() {
   const [typeProduct, setTypeProduct] = useState("");
   const [products, setProducts] = useState([]);

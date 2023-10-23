@@ -1,7 +1,7 @@
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const {DefinePlugin} = require('webpack')
+const { DefinePlugin } = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -27,7 +27,19 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader",
       },
-      {},
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          "sass-loader",
+        ],
+      },
       {},
       {},
     ],

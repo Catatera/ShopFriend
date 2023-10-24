@@ -1,8 +1,6 @@
 import React from "react";
-
 export default function List(props) {
   return (
-    <div>
       <table>
         <thead>
           <tr>
@@ -19,15 +17,5 @@ export default function List(props) {
           ))}
         </tbody>
       </table>
-      {/* <ul>
-        {props.products.map((product) => (
-          <>
-            <td id={product.id} quantity={product.quantity}>
-              {product.value} {props.quantity}
-            </td>
-          </>
-        ))}
-      </ul> */}
-    </div>
   );
 }

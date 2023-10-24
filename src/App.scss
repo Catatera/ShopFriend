@@ -1,0 +1,20 @@
+* {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  background-color: red;
+  margin: 0px auto 0px auto;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.Form {
+  width: 50%;
+  text-align: center;
+}
+.List {
+  width: 50%;
+  text-align: center;
+}

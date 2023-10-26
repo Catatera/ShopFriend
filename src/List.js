@@ -4,8 +4,8 @@ export default function List(props) {
       <table>
         <thead>
           <tr>
-            <th>Produto</th>
-            <th>Quantidade</th>
+            <th>Product</th>
+            <th>Quantity</th>
           </tr>
         </thead>
         <tbody>

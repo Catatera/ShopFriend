@@ -1,20 +1,67 @@
+:root {
+  --cor1: #3498db;
+  --cor2: #ffffff;
+  --cor3: #2ecc71;
+  --cor4: #333333;
+  --cor5: #f1c40f;
+  --fontSizeTitle: clamp(0.3em, 0.8em + 1vw, 4.5em);
+  --fontSizeContent: clamp(1.3em, 0.6em + 1vw, 4.5em);
+  --fontSizeForm: clamp(0.3em, 0.2em + 1vw, 4.5em);
+}
 * {
+  text-align: center;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background-color: rgb(168, 163, 163);
+}
+header {
+  margin: 2vw 0px 3vw;
+  font-size: var(--fontSizeTitle);
+  background-color: var(cor01);
+  h1 {
+    margin: 2vh 0px;
+  }
+}
 main {
-  background-color: red;
-  margin: 0px auto 0px auto;
-  width: 80%;
-  height: 80%;
+  font-size: var(--fontSizeContent);
+  background-color: rgb(225, 221, 221);
+  margin: 0px auto 3vh auto;
+  width: 50vw;
+  border-radius: 7px;
+  min-height: 60vh;
   display: flex;
-  justify-content: space-around;
-}
-.Form {
-  width: 50%;
-  text-align: center;
-}
-.List {
-  width: 50%;
-  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  form {
+    input,
+    button {
+      font-size: var(--fontSizeForm);
+      margin: 1vw 3px;
+    }
+    input[type="text"] {
+      width: 55%;
+      text-align: left;
+    }
+    input[type="number"] {
+      width: 10%;
+    }
+    button {
+      width: 15%;
+    }
+  }
+  table {
+    font-size: var(--fontSizeForm); 
+    margin: 0px 0.7vw;
+    th {
+      padding: 0px 3vw;
+    }
+    tbody {
+      background-color: var(--cor2);
+      td {
+        border: 1px solid rgb(255, 0, 0);
+      }
+    }
+  }
 }

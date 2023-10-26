@@ -30,19 +30,14 @@ export default function App() {
 
   return (
     <>
-      <Header />
+      <Header className={styles.header} />
       <main>
-          <Form
-            className={styles.Form}
-            onChangeProduct={handlechangeProduct}
-            onSetQuantity={handleQuantity}
-            onSubmit={handleSubmit}
-          />
-          <List
-            className={styles.List}
-            products={products}
-            quantity={quantity}
-          />
+        <Form
+          onChangeProduct={handlechangeProduct}
+          onSetQuantity={handleQuantity}
+          onSubmit={handleSubmit}
+        />
+        <List products={products} quantity={quantity} />
       </main>
     </>
   );

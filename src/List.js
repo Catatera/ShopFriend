@@ -1,13 +1,11 @@
 import React from "react";
-
 export default function List(props) {
   return (
-    <div>
       <table>
         <thead>
           <tr>
-            <th>Produto</th>
-            <th>Quantidade</th>
+            <th>Product</th>
+            <th>Quantity</th>
           </tr>
         </thead>
         <tbody>
@@ -19,15 +17,5 @@ export default function List(props) {
           ))}
         </tbody>
       </table>
-      {/* <ul>
-        {props.products.map((product) => (
-          <>
-            <td id={product.id} quantity={product.quantity}>
-              {product.value} {props.quantity}
-            </td>
-          </>
-        ))}
-      </ul> */}
-    </div>
   );
 }

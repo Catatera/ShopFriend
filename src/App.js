@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Header from "./Header";
 import List from "./List";
 import Form from "./Form";
+import styles from "./App.scss";
 export default function App() {
   const [typeProduct, setTypeProduct] = useState("");
   const [products, setProducts] = useState([]);
@@ -10,16 +12,16 @@ export default function App() {
     setTypeProduct(e.target.value);
   };
 
-  const handleQuantity = (e) => { 
-    setQuantity(e.target.value)
-  }
+  const handleQuantity = (e) => {
+    setQuantity(e.target.value);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
     const addProduct = setProducts([
       ...products,
       {
-        id: products.length+1,
+        id: products.length + 1,
         value: typeProduct,
         quantity: quantity,
       },
@@ -28,9 +30,15 @@ export default function App() {
 
   return (
     <>
-      <Form onChangeProduct={handlechangeProduct} onSetQuantity={handleQuantity} onSubmit={handleSubmit} />
-
-      <List products={products} quantity = {quantity} />
+      <Header className={styles.header} />
+      <main>
+        <Form
+          onChangeProduct={handlechangeProduct}
+          onSetQuantity={handleQuantity}
+          onSubmit={handleSubmit}
+        />
+        <List products={products} quantity={quantity} />
+      </main>
     </>
   );
 }

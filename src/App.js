@@ -27,6 +27,9 @@ export default function App() {
       },
     ]);
   }
+  function handleDelete(e) { 
+    console.log(e.target.value)
+  }
 
   return (
     <>
@@ -37,7 +40,7 @@ export default function App() {
           onSetQuantity={handleQuantity}
           onSubmit={handleSubmit}
         />
-        <List products={products} quantity={quantity} />
+        <List products={products} quantity={quantity} onDelete={handleDelete} />
       </main>
     </>
   );

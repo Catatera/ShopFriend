@@ -1,12 +1,11 @@
 :root {
-  --cor1: #3498db;
-  --cor2: #ffffff;
-  --cor3: #2ecc71;
-  --cor4: #333333;
-  --cor5: #f1c40f;
-  --fontSizeTitle: clamp(0.3em, 0.8em + 1vw, 4.5em);
+  --backgroundColor: #282828;
+  --textColor: #CBD4C2;
+  --containerColor: #1a1a1a;
+  --inputColor: #ff9100;
+  --fontSizeTitle: clamp(0.3em, 0.3em + 1vw, 4.5em);
   --fontSizeContent: clamp(1.3em, 0.6em + 1vw, 4.5em);
-  --fontSizeForm: clamp(0.3em, 0.2em + 1vw, 4.5em);
+  --fontSizeForm: clamp(0.3em, 0.4em + 1vw, 4.5em);
 }
 * {
   text-align: center;
@@ -14,22 +13,20 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-color: rgb(168, 163, 163);
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
 }
 header {
   margin: 2vw 0px 3vw;
   font-size: var(--fontSizeTitle);
-  background-color: var(cor01);
   h1 {
     margin: 2vh 0px;
   }
 }
 main {
   font-size: var(--fontSizeContent);
-  background-color: rgb(225, 221, 221);
   margin: 0px auto 3vh auto;
   width: 50vw;
-  border-radius: 7px;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -39,6 +36,10 @@ main {
     button {
       font-size: var(--fontSizeForm);
       margin: 1vw 3px;
+      border-radius: 3px;
+      border: none;
+          box-shadow: 0px 2px 6px 0px black;
+
     }
     input[type="text"] {
       width: 55%;
@@ -49,18 +50,23 @@ main {
     }
     button {
       width: 15%;
+      background-color: var(--inputColor);
     }
   }
   table {
-    font-size: var(--fontSizeForm); 
-    margin: 0px 0.7vw;
+    background-color: var(--containerColor);
+    font-size: var(--fontSizeForm);
+    border-radius: 5px;
+    padding: 1vw 6.7vw 3vw 6.7vw;
     th {
       padding: 0px 3vw;
+      color: var(--textColor);
     }
     tbody {
-      background-color: var(--cor2);
+      background-color: #ffff;
       td {
-        border: 1px solid rgb(255, 0, 0);
+        border: 1px solid black;
+        color: black;
       }
     }
   }

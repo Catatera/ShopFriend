@@ -21,11 +21,20 @@ export default function App() {
     const addProduct = setProducts([
       ...products,
       {
-        id: products.length + 1,
+        id: products.length,
         value: typeProduct,
         quantity: quantity,
       },
     ]);
+  }
+  function handleDelete(productID) {
+    console.log({
+      productID: productID,
+    });
+    console.log(products);
+    setProducts((prevState) =>
+      prevState.filter((product) => product.id !== productID)
+    );
   }
 
   return (
@@ -37,7 +46,7 @@ export default function App() {
           onSetQuantity={handleQuantity}
           onSubmit={handleSubmit}
         />
-        <List products={products} quantity={quantity} />
+        <List products={products} quantity={quantity} onDelete={handleDelete} />
       </main>
     </>
   );

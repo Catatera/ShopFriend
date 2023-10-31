@@ -13,6 +13,7 @@ export default function List(props) {
             <tr key={product.id}>
               <td>{product.value}</td>
               <td>{product.quantity}</td>
+              <td><button onClick={()=>props.onDelete(product.id)} value={product.id}>X</button></td>
             </tr>
           ))}
         </tbody>

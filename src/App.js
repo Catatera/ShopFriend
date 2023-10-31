@@ -21,14 +21,20 @@ export default function App() {
     const addProduct = setProducts([
       ...products,
       {
-        id: products.length + 1,
+        id: products.length,
         value: typeProduct,
         quantity: quantity,
       },
     ]);
   }
-  function handleDelete(e) { 
-    console.log(e.target.value)
+  function handleDelete(productID) {
+    console.log({
+      productID: productID,
+    });
+    console.log(products);
+    setProducts((prevState) =>
+      prevState.filter((product) => product.id !== productID)
+    );
   }
 
   return (

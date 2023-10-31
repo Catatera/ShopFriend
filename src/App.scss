@@ -1,10 +1,11 @@
 :root {
   --backgroundColor: #282828;
-  --textColor: #CBD4C2;
+  --textColor: #cbd4c2;
   --containerColor: #1a1a1a;
   --inputColor: #ff9100;
   --fontSizeTitle: clamp(0.3em, 0.3em + 1vw, 4.5em);
   --fontSizeContent: clamp(1.3em, 0.6em + 1vw, 4.5em);
+  --fontSizeContent2: clamp(0.9em, 0.2em + 0.1vw, 4.5em);
   --fontSizeForm: clamp(0.3em, 0.4em + 1vw, 4.5em);
 }
 * {
@@ -32,14 +33,14 @@ main {
   align-items: center;
   flex-direction: column;
   form {
+    margin-bottom: 1vh;
     input,
     button {
       font-size: var(--fontSizeForm);
-      margin: 1vw 3px;
+      margin: 1vw 0.8vh;
       border-radius: 3px;
       border: none;
-          box-shadow: 0px 2px 6px 0px black;
-
+      box-shadow: 0px 2px 6px 0px black;
     }
     input[type="text"] {
       width: 55%;
@@ -63,10 +64,26 @@ main {
       color: var(--textColor);
     }
     tbody {
-      background-color: #ffff;
-      td {
-        border: 1px solid black;
-        color: black;
+      tr {
+        font-size: var(--fontSizeContent2);
+        background-color: #ffff;
+
+        td {
+          border: 1px solid black;
+          color: black;
+        }
+        td:nth-child(3) {
+          background-color: var(--containerColor);
+          border: none;
+        }
+        button {
+          vertical-align: top;
+          background-color: #db3434; /* Cor de fundo do botão */
+          color: #ffffff; /* Cor do texto */
+          padding: 0.5vw 0.8vw;
+          border: 0px;
+          cursor: pointer;
+        }
       }
     }
   }

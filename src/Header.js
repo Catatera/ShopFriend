@@ -1,11 +1,16 @@
 import React from "react";
-
+import logo from "./media/logo.png"
 export default function Header() {
   return (
     <>
       <header>
-        <h1>ShopFriend</h1>
-        <h2>Shopping Made Simple</h2>
+        <div>
+          <img src={logo}></img>
+        </div>
+        <div>
+          <h1>Shop<span>Friend</span></h1>
+          <h2>Shopping Made <span>Simple</span></h2>
+        </div>
       </header>
     </>
   );

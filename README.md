@@ -1,8 +1,9 @@
 # ShopFriend
 
 ## Sobre o Projeto
-Link para acessar: https://catatera.github.io/ShopFriend/
-ShopFriend é uma aplicação front end construída por mim. A proposta é ser um app para facilitar a criação de uma lista de compras de maneira virtual, onde o usuário deve inserir, na primeira caixa de diálogo, o produto que deseja registrar, bem como sua quantidade na caixa ao lado.
+Link para acessar: https://shop-friend-p6eu.vercel.app/ <br/>
+
+ShopFriend é uma aplicação front end construída por mim com a proposta de ser um app para facilitar a criação de uma lista de compras de maneira virtual, onde o usuário deve inserir, na primeira caixa de diálogo, o produto que deseja registrar, bem como sua quantidade na caixa ao lado.
 
 # Layout
 ![Web](https://github.com/Catatera/ShopFriend/blob/main/docs/assets/layoutShopFriend.png)

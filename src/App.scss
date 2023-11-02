@@ -89,19 +89,21 @@ main {
         background-color: #ffff;
         td {
           color: black;
+          border-radius: 1px;
         }
         td:nth-child(3) {
+          border-radius: 0px;
           background-color: var(--containerColor);
           border: none;
         }
         button {
-          text-align: center;
           margin: 0px;
           vertical-align: middle;
           background-color: #db3434; /* Cor de fundo do botão */
           color: #ffffff; /* Cor do texto */
-          width: 4.4em;
-          height: 4.4em;
+          min-width: 30px;
+          max-width: 2vw;
+          height: 4.6em;
           border: 0px;
           cursor: pointer;
           font-size: 30%;

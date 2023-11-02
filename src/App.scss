@@ -46,7 +46,7 @@ header {
 main {
   font-size: var(--fontSizeContent);
   margin: 0px auto 3vh auto;
-  width: 30vw;
+  max-width: 67vw;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ main {
       text-align: left;
     }
     input[type="number"] {
-      width: 10%;
+      width: 15%;
     }
     button {
       text-align: center;
@@ -88,7 +88,6 @@ main {
       tr {
         background-color: #ffff;
         td {
-          width: 100%;
           color: black;
         }
         td:nth-child(3) {

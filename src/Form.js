@@ -5,7 +5,7 @@ export default function Form(props) {
     <form onSubmit={props.onSubmit}>
       <input type="text" onChange={props.onChangeProduct} ></input>
       <input type="number" onChange={props.onSetQuantity} ></input>
-      <button>Add</button>
+      <button>+</button>
     </form>
   );
 }

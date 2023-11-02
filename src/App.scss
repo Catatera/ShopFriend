@@ -6,8 +6,8 @@
   --fontSizeTitle: clamp(0.3em, 1.5em + 2vw, 4.5em);
   --fontSizeSubTitle: clamp(0.3em, 0.75em + 1vw, 4.5em);
   --fontSizeContent: clamp(1.3em, 0.6em + 1vw, 4.5em);
-  --fontSizeContent2: clamp(0.9em, 0.2em + 0.1vw, 4.5em);
-  --fontSizeForm: clamp(0.3em, 0.4em + 1vw, 4.5em);
+  --fontSizeContent2: clamp(0.1em, 0.3em + 1vw, 3.5em);
+  --fontSizeForm: clamp(0.3em, 0.3em + 1vw, 4.5em);
 }
 * {
   text-align: center;
@@ -22,8 +22,8 @@ header {
   display: flex;
   margin: 2vw 0px 3vw;
   justify-content: center;
-  
-  div:nth-child(1){
+
+  div:nth-child(1) {
     display: flex;
     align-items: center;
     img {
@@ -39,14 +39,14 @@ header {
   h2 {
     font-size: var(--fontSizeSubTitle);
   }
-  span{
-      color: #ff9100;
-    }
+  span {
+    color: #ff9100;
+  }
 }
 main {
   font-size: var(--fontSizeContent);
   margin: 0px auto 3vh auto;
-  width: 50vw;
+  width: 50vh;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -57,6 +57,7 @@ main {
     button {
       font-size: var(--fontSizeForm);
       margin: 1vw 0.8vh;
+      text-align: center;
       border-radius: 3px;
       border: none;
       box-shadow: 0px 2px 6px 0px black;
@@ -69,13 +70,14 @@ main {
       width: 10%;
     }
     button {
+      text-align: center;
       width: 15%;
       background-color: var(--inputColor);
     }
   }
   table {
+    font-size: var(--fontSizeContent2);
     background-color: var(--containerColor);
-    font-size: var(--fontSizeForm);
     border-radius: 5px;
     padding: 1vw 6.7vw 3vw 6.7vw;
     th {
@@ -84,11 +86,9 @@ main {
     }
     tbody {
       tr {
-        font-size: var(--fontSizeContent2);
         background-color: #ffff;
-
         td {
-          border: 1px solid black;
+          width: 100%;
           color: black;
         }
         td:nth-child(3) {
@@ -96,14 +96,15 @@ main {
           border: none;
         }
         button {
-          vertical-align: top;
+          margin: 0px;
+          vertical-align: middle;
           background-color: #db3434; /* Cor de fundo do botão */
           color: #ffffff; /* Cor do texto */
-          width: 4.5em;
-          height: 4.5em;
+          width: 4.4em;
+          height: 4.4em;
           border: 0px;
           cursor: pointer;
-                font-size: 30%;
+          font-size: 30%;
         }
       }
     }

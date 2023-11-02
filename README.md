@@ -15,7 +15,7 @@ ShopFriend é uma aplicação front end construída por mim. A proposta é ser u
 
 ## Implantação em produção
 
--Github Pages
+-Vercel
 
 # Como executar o projeto
 

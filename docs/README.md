@@ -10,8 +10,8 @@ ShopFriend é uma aplicação front end construída por mim. A proposta é ser u
 
 ## Front-End
 
--HTML/CSS/JS
--ReactJS
+- HTML/CSS/JS
+- ReactJS
 
 ## Implantação em produção
 
@@ -19,16 +19,15 @@ ShopFriend é uma aplicação front end construída por mim. A proposta é ser u
 
 # Como executar o projeto
 
-## Front-End
-
-# Pré-requisitos: Node v14.21.3 , npm  /yarn
--Clonar o Repositório
-git clone https://github.com/Catatera/ShopFriend.git
--Entrar na pasta do projeto front end web
--Instalar dependências
-yarn install
--Executar o projeto
-yarn dev
+ Pré-requisitos: Node v14.21.3 , npm  /yarn
+ 
+- Clonar o Repositório <br>
+  _git clone https://github.com/Catatera/ShopFriend.git_ 
+- Entrar na pasta do projeto front end web 
+- Instalar dependências <br>
+  _yarn install_ 
+- Executar o projeto<br>
+  _yarn dev_
 
 # Autor
 

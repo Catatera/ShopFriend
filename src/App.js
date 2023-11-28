@@ -47,10 +47,11 @@ export default function App() {
     <ThemeContext.Provider value={theme}>
       <div
         style={{
-          background: theme === "dark" ? "#cbd4c2" : "#000000",
-        }}
+          background: theme === "dark" ? "#282828" : "#f5f2d0",
+          height: "100vh",
+        }}d
       >
-        <Header className={styles.header} />
+        <Header />
         <main>
           <Form
             onChangeProduct={handlechangeProduct}
@@ -63,9 +64,9 @@ export default function App() {
             onDelete={handleDelete}
           />
         </main>
-        <footer>
+        <aside>
           <ButtonTheme onToggleTheme={handleToggleTheme} />
-        </footer>
+        </aside>
       </div>
     </ThemeContext.Provider>
   );

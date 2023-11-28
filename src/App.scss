@@ -1,7 +1,4 @@
 :root {
-  --backgroundColor: #282828;
-  --textColor: #cbd4c2;
-  --containerColor: #ebebeb;
   --inputColor: #ff9100;
   --fontSizeTitle: clamp(0.3em, 1.5em + 2vw, 4.5em);
   --fontSizeSubTitle: clamp(0.3em, 0.75em + 1vw, 4.5em);
@@ -14,100 +11,107 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-body {
-  background-color: var(--backgroundColor);
-  color: var(--textColor);
-}
-header {
-  display: flex;
-  margin: 2vw 0px 3vw;
-  justify-content: center;
-
-  div:nth-child(1) {
+div {
+  header {
     display: flex;
-    align-items: center;
-    img {
-      width: clamp(0.2em, 2em + 7vw, 9em);
-      vertical-align: middle;
+    justify-content: center;
+    div {
+      margin: 2vw 0px 3vw 0px;
     }
-  }
-  h1 {
-    font-size: var(--fontSizeTitle);
-    margin: 2vh 0px;
-    text-align: left;
-  }
-  h2 {
-    font-size: var(--fontSizeSubTitle);
-  }
-  span {
-    color: #ff9100;
-  }
-}
-main {
-  font-size: var(--fontSizeContent);
-  margin: 0px auto 3vh auto;
-  max-width: 67vw;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  form {
-    margin-bottom: 1vh;
-    input,
-    button {
-      font-size: var(--fontSizeForm);
-      margin: 1vw 0.8vh;
-      text-align: center;
-      border-radius: 3px;
-      border: none;
-      box-shadow: 0px 2px 6px 0px black;
+    div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      img {
+        width: clamp(0.2em, 2em + 7vw, 9em);
+        vertical-align: middle;
+      }
     }
-    input[type="text"] {
-      width: 50%;
+    h1 {
+      font-size: var(--fontSizeTitle);
+      margin: 2vh 0px;
       text-align: left;
     }
-    input[type="number"] {
-      width: 10%;
+    h2 {
+      font-size: var(--fontSizeSubTitle);
     }
-    button {
-      text-align: center;
-      width: 15%;
-      background-color: var(--inputColor);
+    span {
+      color: var(--inputColor);
     }
   }
-  table {
-    font-size: var(--fontSizeContent2);
-    background-color: var(--containerColor);
-    border-radius: 5px;
-    padding: 1vw 6.7vw 3vw 6.7vw;
-    th {
-      padding: 0px 3vw;
+  main {
+    font-size: var(--fontSizeContent);
+    margin: 0px auto 3vh auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    form {
+      margin-bottom: 1vh;
+      input,
+      button {
+        font-size: var(--fontSizeForm);
+        margin: 1vw 0.8vh;
+        text-align: center;
+        border-radius: 3px;
+        border: none;
+        box-shadow: 0px 2px 6px 0px black;
+      }
+      input[type="text"] {
+        width: 50%;
+        text-align: left;
+      }
+      input[type="number"] {
+        width: 10%;
+      }
+      button {
+        text-align: center;
+        width: 15%;
+        background-color: var(--inputColor);
+      }
     }
-    tbody {
-      tr {
-        background-color: #ffff;
-        td {
-          color: black;
-          border-radius: 1px;
-        }
-        td:nth-child(3) {
-          border-radius: 0px;
-          background-color: var(--containerColor);
-          border: none;
-        }
-        button {
-          margin: 0px;
-          vertical-align: middle;
-          background-color: #db3434; /* Cor de fundo do botão */
-          color: #ffffff; /* Cor do texto */
-          min-width: 30px;
-          max-width: 2vw;
-          height: 4.6em;
-          border: 0px;
-          cursor: pointer;
-          font-size: 30%;
+    table {
+      font-size: var(--fontSizeContent2);
+      border-radius: 5px;
+      padding: 1vw 6.7vw 3vw 6.7vw;
+      th {
+        padding: 0px 3vw;
+      }
+      tbody {
+        tr {
+          background-color: #ffff;
+          td {
+            color: black;
+            border-radius: 1px;
+          }
+          td:nth-child(3) {
+            border-radius: 0px;
+            border: none;
+          }
+          button {
+            margin: 0px;
+            vertical-align: middle;
+            background-color: #db3434;
+            color: #ffffff;
+            min-width: 30px;
+            max-width: 2vw;
+            height: 4.6em;
+            border: 0px;
+            cursor: pointer;
+            font-size: 30%;
+          }
         }
       }
     }
+  }
+}
+aside{
+  position: fixed;
+  top: 5%;
+  left: 93%;
+
+  button{
+    font-size: var(--fontSizeContent);
+    padding: 0.4vw;
+    border-radius: 100%;
+    border: none;
   }
 }

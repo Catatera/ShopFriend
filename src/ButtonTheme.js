@@ -3,12 +3,14 @@ import { ThemeContext } from "./App";
 
 export default function ButtonTheme(props) {
   const theme = useContext(ThemeContext);
-  console.log({ theme });
-  return (
-    <button
-      onClick={props.onToggleTheme}
-    >
-      TROCAR TEMA
+
+  return theme === "dark" ? (
+    <button onClick={props.onToggleTheme} style={{ background: "#ffffff" }}>
+      &#127774;
+    </button>
+  ) : (
+    <button onClick={props.onToggleTheme} style={{ background: "#282828" }}>
+      &#127771;
     </button>
   );
 }

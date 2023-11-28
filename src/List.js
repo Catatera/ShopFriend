@@ -1,10 +1,10 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "./App";
 
 export default function List(props) {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
   return (
-    <table>
+    <table style={{ background: theme === "dark" ? "#cbd4c2" : "#cbcbcb" }}>
       <thead>
         <tr>
           <th>Product</th>
@@ -14,13 +14,7 @@ export default function List(props) {
       <tbody>
         {props.products.map((product) => (
           <tr key={product.id}>
-            <td
-              style={{
-                color: theme === "dark" ? "#cbd4c2" : "#000000",
-              }}
-            >
-              {product.value}
-            </td>
+            <td>{product.value}</td>
             <td>{product.quantity}</td>
             <td>
               <button
